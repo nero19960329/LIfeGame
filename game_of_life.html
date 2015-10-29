@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<html>
+	<head>
+		<title>Life Game~</title>
+	</head>
+
+	<body>
+		<div id="allArea">
+			<div id="gameArea">
+				<h3>Game Of Life</h3>
+				<!-- <div id="gridContainer"></div> -->
+				<canvas id="gridCanvas" width="600px" height="450px"></canvas>
+			</div>
+			<div id="divideLine"></div>
+			<div id="controlArea">
+				<h4>游戏控制</h4>
+				<div class="divideRow"></div>
+				<div class="controlButton" onclick="generateMap()">生成地图</div>
+				<div class="controlButton" onclick="startButton()">开始</div>
+				<div class="controlButton" onclick="stopButton()">停止</div>
+				<br />
+				<h4>进阶设置</h4>
+				<div class="divideRow"></div>
+				<fieldset>
+					<legend>活细胞密度</legend>
+					<div class="sliderText">疏 密</div>
+					<input class="slider" type="range" name="live_dense" min="15" max="85" />
+				</fieldset>
+				<fieldset>
+					<legend>网格密度</legend>
+					<div class="sliderText">疏 密</div>
+					<input class="slider" type="range" name="dense" min="40" max="200" />
+				</fieldset>
+				<fieldset>
+					<legend>游戏进行速度</legend>
+					<div class="sliderText">慢 快</div>
+					<input class="slider" type="range" name="speed" min="2.5" max="12.5" />
+				</fieldset>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="js/grid.js"></script>
+	<script type="text/javascript" src="js/interface.js"></script>
+	<script type="text/javascript" src="js/logic.js"></script>
+</html>
